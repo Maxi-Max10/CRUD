@@ -67,8 +67,8 @@
                 <div class="p-4">
                     <div class="table-responsive">
                         <table class="table table-striped">
-                            <thead>
-                                <tr>
+                            <thead >
+                                <tr class="bg-info">
                                     <th scope="col">ID</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Apellido</th>
