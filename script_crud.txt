@@ -1,0 +1,42 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema crud_db
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema crud_db
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `crud_db` DEFAULT CHARACTER SET utf8mb4 ;
+USE `crud_db` ;
+
+-- -----------------------------------------------------
+-- Table `crud_db`.`persona`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `crud_db`.`persona` (
+  `id_usuario` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(50) NULL DEFAULT NULL,
+  `apellido` VARCHAR(30) NULL DEFAULT NULL,
+  `email` VARCHAR(20) NULL DEFAULT NULL,
+  `password` VARCHAR(45) NULL,
+  PRIMARY KEY (`codigo`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 10
+DEFAULT CHARACTER SET = utf8mb4;
+
+INSERT INTO usuarios (idusuario, nombre, apellido, email, password_us) VALUES 
+(1, 'Maximiliano', 'Alderete', 'max35@gmail.com','1234'),
+(2, 'Juan', 'Aguero', 'jcx345@gmail.com','5678'),
+(3, 'Florencia', 'Quiroga', 'floq89@gmail.com', '0987'),
+(4, 'Martina', 'Plaza', 'mtpl23@gmail.com', '56709');
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
